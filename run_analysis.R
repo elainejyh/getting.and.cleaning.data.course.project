@@ -58,3 +58,6 @@ summary.df <- new_dt %>%
               summarise_each(
               funs(mean)
               )
+
+#Write dataset out
+write.table(summary.df, "UCI HAR Dataset/tidy_data.txt", row.names = FALSE,quote = FALSE)
