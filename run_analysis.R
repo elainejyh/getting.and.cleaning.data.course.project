@@ -27,8 +27,8 @@ featuresWanted <- grep(".*[Mm]ean.*|.*[Ss]td.*", features_name)
 featuresWanted.names <- features[featuresWanted,2]
 
 # rename variables
-features_new <- gsub('-Mean', 'mean', featuresWanted.names)
-features_new <- gsub('-Std', 'std', features_new)
+features_new <- gsub('.Mean', 'mean', featuresWanted.names)
+features_new <- gsub('*Std', 'std', features_new)
 features_new <- gsub('[-()]', '', features_new)
 head(features_new)
 
